@@ -9,6 +9,6 @@ variable "app_name" {
 
 variable "docker_image" {
   description = "DockerHub image"
-  # CHANGE THIS 👇
-  default = "swaroops2803/aws-python-project:latest"
+#   default = "swaroops2803/aws-python-project:latest"
+default = "101248947739.dkr.ecr.ap-south-1.amazonaws.com/prod-app:latest"
 }
