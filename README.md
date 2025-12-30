@@ -53,3 +53,12 @@ This project demonstrates real-world DevOps practices including secure CI/CD, ze
 ## Why This Project?
 
 This project focuses on production-readiness rather than tutorials, covering deployment safety, scalability, security, and operational visibility.
+
+---
+
+## Security
+
+- Secrets managed using AWS Secrets Manager
+- Secrets injected into ECS tasks at runtime
+- No secrets stored in code, Terraform state, or CI pipelines
+- Least-privilege IAM permissions applied to ECS roles
