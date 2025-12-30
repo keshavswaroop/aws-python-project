@@ -13,3 +13,9 @@ def root():
         "service": "aws-production-platform",
         "environment": os.getenv("ENV", "local")
     }
+
+@app.get("/secret-check")
+def secret_check():
+    return {
+        "secret_present": bool(os.getenv("APP_SECRET_KEY"))
+    }

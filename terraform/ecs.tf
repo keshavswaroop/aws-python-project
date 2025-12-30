@@ -65,6 +65,13 @@ resource "aws_ecs_task_definition" "app" {
         { name = "ENV", value = "production" }
       ]
 
+      secrets = [
+        {
+          name      = "APP_SECRET_KEY"
+          valueFrom = "${aws_secretsmanager_secret.app_secret.arn}:APP_SECRET_KEY::"
+        }
+      ]
+
       logConfiguration = {
         logDriver = "awslogs"
         options = {
